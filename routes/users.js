@@ -4,7 +4,11 @@ var storage = require('../services/storage.js');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('users', { title: 'Express', users: storage.getAll() });
+  res.render('users', { users: storage.getAll() });
+});
+
+router.get('/:id', function(req, res, next) {
+  res.render('user', { user: storage.getOne(req.params.id) });
 });
 
 module.exports = router;

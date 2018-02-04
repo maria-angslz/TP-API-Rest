@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Modificar Usuario
+        form(method='PUT' action='/users/' + user.id)
+          div.form-group
+            label(for='name') Nombre 
+            input.form-control(type='text' id='name' placeholder='Nombre' name='name' value=user.name)
+          div.form-group
+            label(for='pass') Password 
+            input.form-control(type='password' id='pass' placeholder='Password' name='pass' value=user.pass)
+          button.btn.btn-primary(type='submit') Modificar

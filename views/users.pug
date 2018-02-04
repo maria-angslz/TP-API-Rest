@@ -6,4 +6,6 @@ div
       each user, i in users
         tr
           td 
-            a(href='/users/' + user.id) #{user.name} / #{user.pass}
+            a(href='/users/' + user.id) #{user.name}
+          td 
+            a(href='/users/remove/' + user.id) Eliminar
