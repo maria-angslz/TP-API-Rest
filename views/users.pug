@@ -1,0 +1,9 @@
+div
+  table
+    thead
+      tr: th Usuarios
+    tbody
+      each user, i in users
+        tr
+          td 
+            a(href='/users/' + user.id) #{user.name} / #{user.pass}
