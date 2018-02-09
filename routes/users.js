@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var storage = require('../services/storage.js');
+var User = require('../services/ModeloUser.js');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
